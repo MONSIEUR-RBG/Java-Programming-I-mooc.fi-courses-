@@ -1,0 +1,33 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class IndexOf {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<Integer> list = new ArrayList<>();
+        while (true) {
+            int input = Integer.valueOf(scanner.nextLine());
+            if (input == -1) {
+                break;
+            }
+
+            list.add(input);
+        }
+
+        System.out.println("Search for? ");
+        int userInput= Integer.valueOf(scanner.nextLine());
+        boolean found = false;
+        for(int i =0; i<list.size();i++){
+            if(list.get(i)==userInput){
+                System.out.println(userInput + " is at index " + i);
+                found= true; //Notice that we find an occurence
+            }
+        }
+        
+
+        // implement here finding the indices of a number
+    }
+}
